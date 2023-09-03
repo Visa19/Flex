@@ -1,0 +1,52 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+    margin: 0;
+    padding: 0;
+}
+.dashboard {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-gap: 20px;
+}
+.panel {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    cursor: pointer;
+    height: 200px;
+}
+.panel:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+}
+h2 {
+    margin: 0;
+    font-size: 1.8rem;
+    color: #333;
+}
+.user-panel {
+    background-color: #3498db;
+    color: #fff;
+}
+.content-panel {
+    background-color: #e74c3c;
+    color: #fff;
+}
+.settings-panel {
+    background-color: #2ecc71;
+    color: #fff;
+}
+#stylehide{
+    text-decoration: none;
+}
+

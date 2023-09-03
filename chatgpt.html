@@ -1,0 +1,87 @@
+<?php
+class Category {
+    private $Category_Id;
+    private $Category_name;
+
+    public function __construct() {
+    }
+    
+    public function __construct($Category_Id, $Category_name) {
+        $this->Category_Id = $Category_Id;
+        $this->Category_name = $Category_name;
+    }
+
+    public function getCategory_Id() {
+        return $this->Category_Id;
+    }
+
+    public function setCategory_Id($Category_Id) {
+        $this->Category_Id = $Category_Id;
+    }
+
+    public function getCategory_name() {
+        return $this->Category_name;
+    }
+
+    public function setCategory_name($Category_name) {
+        $this->Category_name = $Category_name;
+    }
+
+    public static function displayCategoryDetails($pdo) {
+        $category_list = array();
+        $query = "SELECT * FROM category";
+        $stmt = $pdo->query($query);
+        while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
+            $Category_Id = $row['Category_Id'];
+            $Category_name = $row['Category_name'];
+            
+            $category = new Category($Category_Id, $Category_name);
+            $category_list[] = $category;
+        }
+        return $category_list;
+    }
+    
+    public static function selectNumOfCategory($pdo) {
+        $query = "SELECT COUNT(*) FROM category";
+        $stmt = $pdo->query($query);
+        $rowCount = $stmt->fetchColumn();
+        return $rowCount;
+    }
+    
+    public function addCategory($pdo) {
+        $query = "INSERT INTO category (Category_Id, Category_name) VALUES (?, ?)";
+        $stmt = $pdo->prepare($query);
+        $stmt->execute([$this->Category_Id, $this->Category_name]);
+        return $stmt->rowCount() > 0;
+    }
+    
+    public static function getCategoryById($pdo, $categoryId) {
+        $query = "SELECT * FROM category WHERE Category_Id = ?";
+        $stmt = $pdo->prepare($query);
+        $stmt->execute([$categoryId]);
+        if ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
+            $Category_Id = $row['Category_Id'];
+            $Category_name = $row['Category_name'];
+            
+            $category = new Category($Category_Id, $Category_name);
+            return $category;
+        } else {
+            return null;
+        }
+    }
+    
+    public function updateCategory($pdo, $newCategoryName) {
+        $query = "UPDATE category SET Category_name = ? WHERE Category_Id = ?";
+        $stmt = $pdo->prepare($query);
+        $stmt->execute([$newCategoryName, $this->Category_Id]);
+        return $stmt->rowCount() > 0;
+    }
+    
+    public function deleteCategoryById($pdo) {
+        $query = "DELETE FROM category WHERE Category_Id = ?";
+        $stmt = $pdo->prepare($query);
+        $stmt->execute([$this->Category_Id]);
+        return $stmt->rowCount() > 0;
+    }
+}
+?>

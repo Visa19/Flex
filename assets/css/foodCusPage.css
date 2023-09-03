@@ -1,0 +1,327 @@
+#bodyCon{
+    overflow-x: hidden;
+    overflow-y: scroll;
+    /*background: url("shttps://images.squarespace-cdn.com/content/v1/5a06aac2cf81e04b144237a5/1560403510321-I8593IIR0VOZQE37246K/IMG_9975.jpg?format=1000w");*/
+    /*opacity: 0.3;*/
+    background: linear-gradient(to bottom, #E88F2A 10%, white 90%);
+    background: url("https://media.istockphoto.com/id/1287029258/photo/blurred-images-of-restaurant-and-coffee-shop-cafe-interior-background-and-lighting-bokeh.webp?b=1&s=170667a&w=0&k=20&c=8kgHZbeO_pmQrpLg6nqX6mYFwDdGUxZWmZQq0xHemKM=");
+    background-blend-mode: overlay;
+    background-size: cover;
+    background-attachment: fixed;
+    z-index: -1;
+}
+#bodyCon::-webkit-scrollbar {
+    display: none;
+}
+#topHeader{
+    background-color: #006400;
+}
+#sliderImg{
+    width: 1550px; 
+    height: 650px;
+}
+#navBottomColor{
+    background-color:  #006400;
+}
+#customerLoyalityCard{
+    height: 250px; 
+    width: 250px;
+}
+#threeMainCard{
+    /*background: linear-gradient(0deg, rgba(255,186,33,0.5) 0%, rgba(255,186,33,1) 100%);*/
+    background-color: #63d471;
+    /*background-image: linear-gradient(315deg, #63d471 0%, #233329 74%);*/
+    background: linear-gradient(to bottom, #E88F2A, #000000);
+    font-family: 'Oswald', sans-serif;
+    color: #8fc93c;
+    text-shadow: 2px 2px 5px black;
+    /*box-shadow: 10px 10px 5px #aaaaaa;*/
+    border: 10px solid #FFFFFF; 
+    border-radius: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+#threeMainCard:hover{
+    background-color: #51713a;
+    background-image: linear-gradient(314deg, #51713a 0%, #000e21 74%);
+    color: #fff;
+    transform: scale(1.1);
+    z-index: 9;
+    text-shadow: 2px 2px 5px #006400;
+}
+#firstCardButton{
+    background: none;
+    border: 1px solid #fff;
+    border-radius: 10px;
+    color: white;
+    padding: 10px 27px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+#firstCardButton:hover{
+    background-color: black;
+    color: #63d471;
+}
+
+/*product*/
+
+#myCarousel1 {
+    margin: 50px auto;
+    padding: 0 70px;
+}
+#myCarousel1 .carousel-item {
+    min-height: 330px;
+    text-align: center;
+    overflow: hidden;
+}
+#myCarousel1 .carousel-item .img-box {
+    height: 160px;
+    width: 100%;
+    position: relative;
+}
+#myCarousel1 .carousel-item img {	
+    max-width: 100%;
+    max-height: 100%;
+    display: inline-block;
+    position: absolute;
+    bottom: 0;
+    margin: 0 auto;
+    left: 0;
+    right: 0;
+}
+#myCarousel1 .carousel-item h4 {
+    font-size: 18px;
+    margin: 10px 0;
+}
+#myCarousel1 .carousel-item .btn {
+    color: #333;
+    border-radius: 0;
+    font-size: 11px;
+    text-transform: uppercase;
+    font-weight: bold;
+    background: none;
+    border: 1px solid #ccc;
+    padding: 5px 10px;
+    margin-top: 5px;
+    line-height: 16px;
+}
+#myCarousel1 .carousel-item .btn:hover, .carousel .carousel-item .btn:focus {
+    color: #fff;
+    background: #000;
+    border-color: #000;
+    box-shadow: none;
+}
+#myCarousel1 .carousel-item .btn i {
+    font-size: 14px;
+    font-weight: bold;
+    margin-left: 5px;
+}
+#myCarousel1 .thumb-wrapper {
+    text-align: center;
+}
+#myCarousel1 .thumb-content {
+    padding: 15px;
+}
+.carousel-control-prev, .carousel-control-next {
+    height: 100px;
+    width: 40px;
+    background: none;
+    margin: auto 0;
+    background: rgba(0, 0, 0, 0.2);
+}
+.carousel-control-prev i, .carousel-control-next i {
+    font-size: 30px;
+    position: absolute;
+    top: 50%;
+    display: inline-block;
+    margin: -16px 0 0 0;
+    z-index: 5;
+    left: 0;
+    right: 0;
+    color: rgba(0, 0, 0, 0.8);
+    text-shadow: none;
+    font-weight: bold;
+}
+.carousel-control-prev i {
+    margin-left: -3px;
+}
+.carousel-control-next i {
+    margin-right: -3px;
+}
+#myCarousel1 .item-price {
+    font-size: 13px;
+    padding: 2px 0;
+}
+#myCarousel1 .item-price strike {
+    color: #999;
+    margin-right: 5px;
+}
+#myCarousel1 .item-price span {
+    color: #86bd57;
+    font-size: 110%;
+}	
+#myCarousel1 .carousel-indicators {
+    bottom: -50px;
+}
+.carousel-indicators li, .carousel-indicators li.active {
+    width: 10px;
+    height: 10px;
+    margin: 4px;
+    border-radius: 50%;
+    border-color: transparent;
+    border: none;
+}
+.carousel-indicators li {	
+    background: rgba(0, 0, 0, 0.2);
+}
+.carousel-indicators li.active {	
+    background: rgba(0, 0, 0, 0.6);
+}
+.star-rating li {
+    padding: 0;
+}
+.star-rating i {
+    font-size: 14px;
+    color: #ffc000;
+}
+#wrap{
+    background: #202020;
+}
+#phone{
+    color: #fff;
+    font-size: 12px; 
+}
+#socialmedia{
+    display: inline-block;
+}
+#socialmediaLink{
+    width: 34px;
+    height: 34px;
+    background: #4d4d4d;
+    margin-right: 1px;
+}
+
+/*Footer*/
+#footerSubFont{
+    font-size: 14px; 
+    color: #fff;
+}
+
+/*Feedback*/
+#container {
+    display: flex;
+    align-items: center;
+}
+
+#blockquote-custom {
+    border: 2px solid #E88F2A;
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 20px;
+    position: relative;
+    max-width: 500px;
+    width: 100%;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+#blockquote-custom:before {
+    content: "";
+    position: absolute;
+    top: -5px;
+    left: -5px;
+    height: 100%;
+    width: 100%;
+    background-color: #E88F2A;
+    z-index: -1;
+    border-radius: 20px;
+}
+
+#blockquote-custom-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 60px;
+    height: 60px;
+    background-color: #E88F2A;
+    border-radius: 50%;
+    position: absolute;
+    top: -30px;
+    left: 50%;
+    transform: translateX(-50%);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+#blockquote-custom-icon i {
+    font-size: 24px;
+    color: #fff;
+}
+
+#blockquote-custom p {
+    color: #333;
+    font-size: 18px;
+    line-height: 1.6;
+    margin-top: 20px;
+}
+
+#blockquote-footer {
+    text-align: right;
+    margin-top: 20px;
+    color: #555;
+}
+
+#blockquote-footer cite {
+    color: #E88F2A;
+}
+
+#blockquote-footer::before {
+    content: "\2014 \2003";
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fa;
+}
+#container {
+    margin-top: 30px;
+    max-width: 600px;
+    border: 1px solid #ddd;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+#header {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-align: center;
+}
+.option-group {
+    margin-bottom: 20px;
+}
+.custom-checkbox {
+    margin-right: 10px;
+}
+.btn-order {
+    margin-top: 20px;
+    width: 100%;
+}
+
+/*Form table*/
+table{
+    font-family: 'Oswald', sans-serif;
+    font-size: 15px;
+    width: 100%;
+    padding: 15 px;
+    background-color: black;
+}
+h4{
+    margin-top: 15px;
+}
+#foodItem{
+    margin-left: 30px;
+}
